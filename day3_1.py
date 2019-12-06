@@ -51,7 +51,6 @@ def convertToSet(wire):
     currentPoint = [0,0]
 
     for steps in wire:
-        # print(steps)
         for _ in range(int(steps[1:])):
             currentPoint[0 if steps[0] in ("L","R") else 1] += -1 if steps[0] in ("D","L") else 1
             points.add(tuple(currentPoint))
