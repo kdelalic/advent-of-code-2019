@@ -17,6 +17,7 @@ Find the input noun and verb that cause the program to produce the output 196907
 f = open("inputs/day2.txt", "r")
 
 opsStr = f.read().strip()
+f.close()
 opsOrig = opsStr.split(",")
 opsOrig = list(map(int, opsOrig))
 

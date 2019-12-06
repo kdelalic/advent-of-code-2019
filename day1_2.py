@@ -26,4 +26,3 @@ while mass:
 f.close()
 
 print(int(totalFuel))
-

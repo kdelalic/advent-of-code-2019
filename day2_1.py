@@ -44,6 +44,7 @@ Once you have a working computer, the first step is to restore the gravity assis
 f = open("inputs/day2.txt", "r")
 
 opsStr = f.read().strip()
+f.close()
 ops = opsStr.split(",")
 ops = list(map(int, ops))
 
