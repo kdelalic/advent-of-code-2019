@@ -17,26 +17,23 @@ How many different passwords within the range given in your puzzle input meet th
 Your puzzle input is 136818-685979.
 """
 
-import math, re
+import re
 
-def hasAdjacentDigits(number):
+def isValid(number):
     num = str(number)
-    matches = re.findall('00+|11+|22+|33+|44+|55+|66+|77+|88+|99+', num)
 
-    return bool(matches)
-
-def hasIncreasingDigits(number):
-    num = str(number)
+    # Check if digits are increasing
     prev = ""
     for i in num:
         if i < prev:
             return False
         prev = i
+    
+    # Check for adjacent digits
+    matches = re.findall('00+|11+|22+|33+|44+|55+|66+|77+|88+|99+', num)
 
-    return True
+    return bool(matches)
 
-adjacentDigits = [num for num in range(136818, 685979) if hasAdjacentDigits(num)]
+validNumbers = [num for num in range(136818, 685979) if isValid(num)]
 
-increasingDigits = [num for num in adjacentDigits if hasIncreasingDigits(num)]
-
-print(len(increasingDigits))
+print(len(validNumbers))
