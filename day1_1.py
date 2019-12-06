@@ -20,11 +20,10 @@ f = open("inputs/day1.txt", "r")
 
 mass = f.readline()
 while mass:
-	fuel = math.floor(int(mass) / 3) - 2
-	totalFuel += fuel
-	mass = f.readline()
+    fuel = math.floor(int(mass) / 3) - 2
+    totalFuel += fuel
+    mass = f.readline()
 
 f.close()
 
 print(int(totalFuel))
-
